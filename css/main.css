@@ -1,0 +1,63 @@
+
+body{
+	background-color: black;
+}
+
+/*width is set to 1200px to accomodate images of ryu*/
+
+.main{
+	background-color: white;
+	margin-top: 110px;
+	padding-left: 100px;
+	min-width: 1200px;
+	height: 500px;
+	position: relative;
+	z-index: 1;
+}
+
+.ryu{
+	width: 659px;
+	height: 494px;
+}
+
+.ryu-ready, .ryu-still, .ryu-throwing {
+	width: 659px;
+	height: 494px;
+}
+
+/*this is set to display:none because we want initially for div.ryu-still to display*/
+/*other divs will display in response to events*/
+
+.ryu-ready, .ryu-throwing {
+	display:none;
+}
+
+.ryu-ready{
+	background-image: url("../images/ryu-ready-position.gif");
+}
+
+.ryu-still{
+	background-image: url("../images/ryu-standing-still.png");
+}
+
+.ryu-throwing{
+	background-image: url("../images/ryu-throwing-hadouken.png");
+}
+
+/*this guarantees that the images are not repeated if the div they are in is bigger than their dimensions*/
+
+.hadouken, .ryu-ready, .ryu-still, .ryu-throwing{
+	background-repeat: no-repeat;
+}
+
+.hadouken{
+	background-image: url("../images/hadouken.gif");
+	width: 156px;
+	height: 90px;
+	display: none;
+	float: left;
+	position: absolute;
+	z-index: 10;
+	left: 520px;
+    top: 167px;
+}
