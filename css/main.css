@@ -1,6 +1,9 @@
 
 body{
 	background-color: black;
+	font-family:'Amatic SC', cursive;
+	font-weight: bold;
+	font-size: 30px;
 }
 
 /*width is set to 1200px to accomodate images of ryu*/
@@ -20,7 +23,7 @@ body{
 	height: 494px;
 }
 
-.ryu-ready, .ryu-still, .ryu-throwing {
+.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
 	width: 659px;
 	height: 494px;
 }
@@ -28,7 +31,7 @@ body{
 /*this is set to display:none because we want initially for div.ryu-still to display*/
 /*other divs will display in response to events*/
 
-.ryu-ready, .ryu-throwing {
+.ryu-ready, .ryu-throwing, .ryu-cool {
 	display:none;
 }
 
@@ -42,6 +45,10 @@ body{
 
 .ryu-throwing{
 	background-image: url("../images/ryu-throwing-hadouken.png");
+}
+
+.ryu-cool{
+	background-image: url("../images/ryu-cool.gif");
 }
 
 /*this guarantees that the images are not repeated if the div they are in is bigger than their dimensions*/
@@ -60,4 +67,23 @@ body{
 	z-index: 10;
 	left: 520px;
     top: 167px;
+}
+
+.instructions{
+	width: 292px;
+    height: 90px;
+    float: left;
+    position: absolute;
+    color: black;
+    display: block;    
+}
+
+.click{
+	left: 640px;
+    top: 35px;
+}
+
+.xKey{
+    left: 980px;
+    top: 201px;
 }
